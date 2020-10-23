@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## SSR
+
+### Commands
+
+Run `npm run dev:ssr` for development server run;
+Run `npm run serve:ssr` for run builded project;
+Run `npm run build:ssr` for build application;
+Run `npm run prerender` for save renderer HTML to a static file;
+
+### More info
+
+[Angular universal docs](https://angular.io/guide/universal)
