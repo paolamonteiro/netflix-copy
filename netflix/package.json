@@ -2,14 +2,11 @@
   "name": "netflix",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --open",
-    "build": "ng build",
     "test": "ng test",
     "lint:fix": "tsc --noEmit && eslint . --ext js,ts --quiet --fix",
     "lint": "tsc --noEmit && eslint . --ext js,ts",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run netflix:serve-ssr --open",
+    "dev:ssr": "ng run netflix:serve-ssr",
     "serve:ssr": "node dist/netflix/server/main.js",
     "build:ssr": "ng build --prod && ng run netflix:server:production",
     "prerender": "ng run netflix:prerender"
