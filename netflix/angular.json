@@ -24,8 +24,8 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
-            "scripts": []
+            "styles": ["src/styles.scss", "node_modules/materialize-css/dist/css/materialize.css"],
+            "scripts": ["node_modules/materialize-css/dist/js/materialize.js"]
           },
           "configurations": {
             "production": {

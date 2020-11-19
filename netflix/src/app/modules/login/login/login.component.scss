@@ -1,0 +1,123 @@
+@import "../../../../variables.scss";
+
+:host {
+  .login-container {
+    z-index: 0;
+    position: relative;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/84b453b4-0d46-4f2c-bd44-81aa6c19c6b5/c548520c-3aaf-409c-bdce-11393df71cf1/BR-pt-20201116-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+		width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  * {
+    z-index: 1;
+  }
+
+  .gradient-filter{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: map-get($colors, black);
+  }
+
+		.login-container-card {
+      min-height: calc(100vh - 316px);
+      width: 450px;
+      .card {
+        background-color: transparent;
+        background-color: map-get($colors, black);
+        width: 100%;
+        padding: 20px 40px 28px;
+
+        .card-content {
+          .card-title {
+            color: map-get($colors, white);
+            font-weight: bold;
+          }
+
+          .info [type="checkbox"]:checked + span:not(.lever):before{
+            border-color: transparent map-get($colors, red) map-get($colors, red) transparent;
+          }
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            span {
+              padding-left: 25px;
+            }
+            *{
+              font-size: 13px;
+              line-height: 1.6em;
+            }
+          }
+
+          .input-field {
+            position: relative;
+
+            .label {
+              color: map-get($colors, white) !important;
+              position: absolute;
+            }
+
+            .input {
+              background: map-get($colors, dark-grey-alt);
+              color: map-get($colors, white) ;
+              height: 50px;
+            }
+          }
+        }
+      }
+
+
+      .additional-info {
+        &__logo-container {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+        }
+
+        &__logo {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+
+        &__know-more {
+          margin-top: 10px;
+          display: block;
+        }
+
+        p {
+          color: map-get($colors, medium-grey);
+          margin-top: 10px;
+        }
+
+      }
+
+
+
+      .btn {
+        background-color: map-get($colors, red);
+        width: 100%;
+      }
+		}
+  }
+
+  header {
+    .logo {
+      width: 160px;
+      height: 78px;
+      padding: 20px;
+    }
+  }
+
+  .page-footer {
+    background-color: map-get($colors, black);
+    height: 258px;
+  }
+}
