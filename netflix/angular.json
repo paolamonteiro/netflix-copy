@@ -24,6 +24,9 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/base-styles/"]
+            },
             "styles": ["src/styles.scss", "node_modules/materialize-css/dist/css/materialize.css"],
             "scripts": ["node_modules/materialize-css/dist/js/materialize.js"]
           },

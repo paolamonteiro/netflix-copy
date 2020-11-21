@@ -1,11 +1,7 @@
 <main class="login-container">
   <div class="gradient-filter"></div>
   <header>
-    <img
-      class="logo"
-      src="../../../../assets/netflix-logo.svg"
-      alt="Netflix Logo"
-    />
+    <img class="logo" src="../../../../assets/netflix-logo.svg" alt="Netflix Logo" />
   </header>
 
   <section class="container login-container-card">
@@ -16,42 +12,31 @@
           <div class="input-field active">
             <input id="email" type="email" />
             <label for="email">Email ou número de telefone</label>
-            <span class="helper-text" data-error="wrong" data-success="right"
-              >Senha</span
-            >
+            <span class="helper-text" data-error="wrong" data-success="right">Senha</span>
           </div>
 
           <div class="input-field">
             <input id="password" type="password" />
             <label for="password">Password</label>
-            <span class="helper-text" data-error="wrong" data-success="right"
-              >Invalid password</span
-            >
+            <span class="helper-text" data-error="wrong" data-success="right">Invalid password</span>
           </div>
-          <button class="waves-effect waves-light btn">Sign In</button>
+          <button class="waves-effect waves-light btn">Entrar</button>
           <div class="info">
             <label>
               <input class="info__remember" type="checkbox" id="remember" />
-              <span for="remember" class="info__remember-label"
-                >Lembre-se de mim</span
-              >
+              <span for="remember" class="info__remember-label">Lembre-se de mim</span>
             </label>
             <a class="info__remember-label">Precisa de ajuda?</a>
           </div>
           <div class="additional-info">
             <div class="additional-info__logo-container">
-              <img
-                src="../../../../assets/facebook-icon.png"
-                class="additional-info__logo"
-                alt="Facebook icon"
-              /><span>Conectar com Facebook</span>
+              <img src="../../../../assets/facebook-icon.png" class="additional-info__logo" alt="Facebook icon" /><span
+                >Conectar com Facebook</span
+              >
             </div>
-            <p>
-              Novo por aqui? <a class="additional-info__sign">Assine agora.</a>
-            </p>
+            <p>Novo por aqui? <a class="additional-info__sign">Assine agora.</a></p>
             <span class="additional-info__know-more">
-              Esta página é protegida pelo Google reCAPTCHA para garantir que
-              você não é um robô. <a>Saiba mais.</a>
+              Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a>Saiba mais.</a>
             </span>
           </div>
         </form>
@@ -59,19 +44,24 @@
     </div>
   </section>
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h5>Footer</h5>
-        </div>
+  <footer class="page-footer useful-info">
+    <div class="container-fluid useful-info__container">
+      <div>
+        <p class="useful-info__number">Dúvidas? Ligue 0800-761-4631</p>
       </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
+      <ul class="useful-info__links">
+        <li><a>Perguntas frequentes</a></li>
+        <li><a>Centro de ajuda</a></li>
+        <li><a>Termos de uso</a></li>
+        <li><a>Privacidade</a></li>
+        <li><a>Preferências de cookies</a></li>
+        <li><a>Informações corporativas</a></li>
+      </ul>
+
+      <button class="btn useful-info__language-button" href="#">
+        <i class="material-icons">language</i> Português
+        <i class="material-icons">arrow_drop_down</i>
+      </button>
     </div>
   </footer>
 </main>
