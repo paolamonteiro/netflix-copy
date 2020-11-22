@@ -69,15 +69,21 @@
           .input-field {
             position: relative;
 
-            .label {
-              color: map-get($colors, white) !important;
-              position: absolute;
+            label {
+              color: map-get($colors, medium-grey-alt);
+
             }
 
-            .input {
+            input {
               background: map-get($colors, dark-grey-alt);
               color: map-get($colors, white) ;
               height: 50px;
+              border-radius: 4px;
+
+              &:focus {
+                border-bottom: 1px solid map-get($colors, red);
+                box-shadow: 0 1px 0 0 map-get($colors, red);
+              }
             }
           }
         }
