@@ -1,0 +1,199 @@
+@import "variables";
+
+:host {
+  header {
+    .logo {
+      width: 167px;
+      height: 78px;
+      padding: 20px;
+    }
+  }
+
+  .login-container {
+    z-index: 0;
+    position: relative;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/84b453b4-0d46-4f2c-bd44-81aa6c19c6b5/c548520c-3aaf-409c-bdce-11393df71cf1/BR-pt-20201116-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+		width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  * {
+    z-index: 1;
+  }
+
+  .gradient-filter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: map-get($colors, light-black);
+  }
+
+		.login-container-card {
+      min-height: calc(100vh - 316px);
+      width: 450px;
+      margin-bottom: 90px;
+
+      .card {
+        background-color: transparent;
+        background-color: map-get($colors, black);
+        width: 100%;
+        padding: 20px 40px 28px;
+
+        .card-content {
+          .card-title {
+            color: map-get($colors, white);
+            font-weight: bold;
+            margin-bottom: 28px;
+            font-size: 32px;
+          }
+
+          .info [type="checkbox"]:checked + span:not(.lever):before{
+            border-color: transparent map-get($colors, red) map-get($colors, red) transparent;
+          }
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            &__remember-label {
+              color: map-get($colors, medium-grey-alt);
+            }
+
+            span {
+              padding-left: 25px;
+            }
+
+            *{
+              font-size: 13px;
+              line-height: 1.6em;
+            }
+          }
+
+          .input-field {
+            position: relative;
+
+            &> label:not(.label-icon).active {
+              transform: translateY(-1px) scale(0.75);
+              padding-top: 6px
+            }
+
+            label {
+              color: map-get($colors, medium-grey-alt);
+              padding: 0 0 0 26px;              
+            }
+
+            input {
+              background: map-get($colors, dark-grey-alt);
+              color: map-get($colors, white) ;
+              height: 50px;
+              border-radius: 4px;
+              padding: 16px 20px 6px;
+
+              &:focus {
+                border-bottom: 1px solid map-get($colors, red);
+                box-shadow: 0 1px 0 0 map-get($colors, red);
+              }
+            }
+            
+            input, label {
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+
+      .additional-info {
+        margin-top: 50px;
+
+        &__logo-container {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+
+          span {
+            color: map-get($colors, medium-grey);
+            font-size: 13px;
+          }
+        }
+
+        &__logo {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+
+        &__know-more {
+          margin-top: 10px;
+          display: block;
+          font-size: 13px;
+          color: map-get($colors, dark-grey);
+
+          a {
+            color: map-get($colors, light-blue)
+          }
+        }
+
+        &__sign {
+          color: map-get($colors, white)
+        }
+
+        p {
+          color: map-get($colors, medium-grey);
+          margin-top: 10px;
+        }
+      }
+
+      .btn {
+        background-color: map-get($colors, red);
+        width: 100%;
+        height: 48px;
+        font-weight: bold;
+        margin: 24px 0 12px;
+      }
+		}
+  }
+
+  .useful-info {
+    background-color: map-get($colors, black);
+    height: 258px;
+    color: map-get($colors, medium-grey-alt2);
+
+    &__container {
+      margin: 0 30px;
+    }
+
+    &__links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        margin-top: 10px;
+
+        a {
+          color: map-get($colors, medium-grey-alt2);
+        }
+      }
+    }
+
+    &__language-button {
+      display: flex;
+      align-items: center;
+      background-color: map-get($colors, full-black);
+      border: 1px solid map-get($colors, dark-grey-alt);
+      padding: 25px 15px;
+      margin-top: 25px;
+      font-size: 13px;
+      color: map-get($colors, medium-grey-alt2);
+      text-transform: none;
+
+      i:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+}

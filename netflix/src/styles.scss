@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+* {
+    max-width: 100%;
+}
+
+body {
+  color: map-get($colors, white)
+}
+
+a {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Reset checkbox styles */
+[type="checkbox"] + span:not(.lever) {
+  padding-left: 25px;
+}

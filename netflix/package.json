@@ -7,6 +7,7 @@
     "lint:fix": "tsc --noEmit && eslint . --ext js,ts --quiet --fix",
     "lint": "tsc --noEmit && eslint . --ext js,ts",
     "e2e": "ng e2e",
+    "start": "ng serve --open",
     "dev:ssr": "ng run netflix:serve-ssr",
     "serve:ssr": "node dist/netflix/server/main.js",
     "build:ssr": "ng build --prod && ng run netflix:server:production",
@@ -30,7 +31,9 @@
     "@angular/platform-server": "~10.2.0",
     "@angular/router": "~10.2.0",
     "@nguniversal/express-engine": "^10.1.0",
+    "angular2-materialize-v1": "^1.0.6",
     "express": "^4.15.2",
+    "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

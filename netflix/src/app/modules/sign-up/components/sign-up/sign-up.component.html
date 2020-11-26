@@ -1,0 +1,67 @@
+<main class="login-container">
+  <div class="gradient-filter"></div>
+  <header>
+    <img class="logo" src="../../../../assets/netflix-logo.svg" alt="Netflix Logo" />
+  </header>
+
+  <section class="container login-container-card">
+    <div class="card">
+      <div class="card-content">
+        <h1 class="card-title">Registrar</h1>
+        <form>
+          <div class="input-field active">
+            <input id="name" type="text" />
+            <label for="name">Nome</label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
+          </div>
+          <div class="input-field active">
+            <input id="email" type="email" />
+            <label for="email">Email ou número de telefone</label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
+          </div>
+
+          <div class="input-field">
+            <input id="password" type="password" />
+            <label for="password">Senha</label>
+            <span class="helper-text" data-error="wrong" data-success="right">Invalid password</span>
+          </div>
+
+          <div class="input-field">
+            <input id="password-confimation" type="password" />
+            <label for="password-confimation">Confirme sua senha</label>
+            <span class="helper-text" data-error="wrong" data-success="right">Invalid password</span>
+          </div>
+          <button type="button" class="waves-effect waves-light btn">Registrar-se</button>
+          <div class="info">
+            <label>
+              <input class="info__remember" type="checkbox" id="remember" />
+              <span for="remember" class="info__remember-label">Lembre-se de mim</span>
+            </label>
+            <a class="info__remember-label">Precisa de ajuda?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer useful-info">
+    <div class="container-fluid useful-info__container">
+      <div>
+        <p class="useful-info__number">Dúvidas? Ligue 0800-761-4631</p>
+      </div>
+      <ul class="useful-info__links">
+        <li><a>Perguntas frequentes</a></li>
+        <li><a>Centro de ajuda</a></li>
+        <li><a>Termos de uso</a></li>
+        <li><a>Privacidade</a></li>
+        <li><a>Preferências de cookies</a></li>
+        <li><a>Informações corporativas</a></li>
+      </ul>
+
+      <button class="btn useful-info__language-button" href="#">
+        <i class="material-icons">language</i> Português
+        <i class="material-icons">arrow_drop_down</i>
+      </button>
+    </div>
+  </footer>
+</main>

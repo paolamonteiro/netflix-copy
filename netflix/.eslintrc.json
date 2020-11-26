@@ -94,7 +94,8 @@
     "import/extensions": [".ts", ".js"],
     "import/parsers": { "@typescript-eslint/parser": [".ts", ".js"] },
     "import/resolver": {
-      "node": { "extensions": [".ts", ".js", ".d.ts"], "paths": ["."] }
+      "node": { "extensions": [".ts", ".js", ".d.ts"], "paths": ["."] },
+      "typescript": "./tsconfig.json"
     }
   }
 }

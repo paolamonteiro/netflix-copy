@@ -8,4 +8,4 @@ import { ExampleModuleRoutingModule } from './example-module-routing.module';
   declarations: [ExampleComponent],
   imports: [CommonModule, ExampleModuleRoutingModule]
 })
-export class ExampleModuleModule {}
+export class ExampleModuleModule { }
