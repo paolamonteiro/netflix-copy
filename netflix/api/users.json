@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Ozob da Silva",
+      "email": "ozob@gmail.com",
+      "password": "1234",
+      "profiles": [
+          {
+              "name": "Ozob",
+              "avatar": "./assets/avatar1.png",
+              "favoriteMovies": []
+          }
+      ]
+		}
+  ]
+}
