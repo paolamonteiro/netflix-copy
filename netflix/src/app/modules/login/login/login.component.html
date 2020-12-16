@@ -1,4 +1,4 @@
-<main class="login-container" [formGroup]="loginForm">
+<main class="login-container">
   <div class="gradient-filter"></div>
   <header>
     <img class="logo" src="../../../../assets/netflix-logo.svg" alt="Netflix Logo" />
@@ -8,7 +8,7 @@
     <div class="card">
       <div class="card-content">
         <h1 class="card-title">Entrar</h1>
-        <form>
+        <form [formGroup]="loginForm">
           <div class="input-field active">
             <input id="email" type="email" formControlName="email" />
             <label for="email">Email ou número de telefone</label>
@@ -20,7 +20,7 @@
             <label for="password">Senha</label>
             <span class="helper-text" data-error="wrong" data-success="right">Senha inválida</span>
           </div>
-          <button type="button" class="waves-effect waves-light btn" (click)="login()">Registrar</button>
+          <button type="button" class="waves-effect waves-light btn" (click)="login()">Entrar</button>
           <div class="info">
             <label>
               <input class="info__remember" type="checkbox" id="remember" />
