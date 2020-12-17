@@ -6,12 +6,12 @@
       "email": "ozob@gmail.com",
       "password": "1234",
       "profiles": [
-          {
-              "name": "Ozob",
-              "avatar": "./assets/avatar1.png",
-              "favoriteMovies": []
-          }
+        {
+          "name": "Ozob",
+          "avatar": "./assets/avatar1.png",
+          "favoriteMovies": []
+        }
       ]
-		}
+    }
   ]
 }

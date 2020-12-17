@@ -1,46 +1,46 @@
-import { UsersService } from '../../modules/login/services/users.service';
 import { Injectable } from '@angular/core';
-import { CurrentUser, User, RegisterUser } from "../../modules/login/models/user.model"
 import { Router } from '@angular/router';
 
+import { CurrentUser, User, RegisterUser } from '../../modules/login/models/user.model';
+import { UsersService } from '../../modules/login/services/users.service';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
+  constructor(private userService: UsersService, private router: Router) {}
 
-  constructor(private userService: UsersService, private router: Router) { }
-
-  public signUp(register: RegisterUser) {
+  public signUp(register: RegisterUser): void {
     // TODO
   }
 
-  public loginAuth(currentUser: CurrentUser) {
+  public loginAuth(currentUser: CurrentUser): boolean {
     let user: User;
     this.userService.getAllUsers().subscribe(users => {
-      user = users.find(user => user.email === currentUser.email && user.password === currentUser.password);
+      user = users.find(userInfo => userInfo.email === currentUser.email && userInfo.password === currentUser.password);
     });
 
     if (user) {
-      localStorage.setItem('userLogged', JSON.stringify(user));
-      localStorage.setItem('status', 'loggedIn');
-      localStorage.setItem('id', user.id);
+      localStorage.setItem('netflix-userLogged', JSON.stringify(user));
+      localStorage.setItem('netflix-status', 'loggedIn');
+      localStorage.setItem('netflix-id', user.id);
 
-      this.router.navigate(['/home']);
+      return true;
     } else {
-      alert("Incorrect e-mail or password");
-      throw new Error("E-mail ou senha incorretos");
+      alert('Incorrect e-mail or password');
+      throw new Error('E-mail ou senha incorretos');
     }
   }
 
-  public logOut() {
-    localStorage.removeItem('userLogged');
-    localStorage.removeItem('status');
-    localStorage.removeItem('id');
+  public logOut(): boolean {
+    localStorage.removeItem('netflix-userLogged');
+    localStorage.removeItem('netflix-status');
+    localStorage.removeItem('netflix-id');
 
-    this.router.navigate(['/login']);
+    return true;
   }
 
-  public isUserLoggedIn() {
-    return localStorage.getItem('status') === 'loggedIn';
+  public getUserId(): string {
+    return localStorage.getItem('netflix-id');
   }
 }
