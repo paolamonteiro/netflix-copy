@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 
 import { CurrentUser, User, RegisterUser } from '../../modules/login/models/user.model';
 import { UsersService } from './users.service';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, find, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { of, throwError } from "rxjs";
 
 @Injectable({
   providedIn: 'root',
@@ -11,16 +12,22 @@ import { debounceTime } from 'rxjs/operators';
 export class AuthService {
   constructor(private userService: UsersService, private router: Router) {}
 
-  public signUp(register: RegisterUser): void {
-    this.userService.addUser(register).subscribe(
-      user => {
-        this.loginAuth(user);
-      },
-      error => {
-        console.error(error);
-        alert('Erro ao cadastrar');
-      },
-    );
+  public signUp(registerUser: RegisterUser): void {
+    this.userService.getAllUsers().pipe(switchMap(users  => {
+      const userExists = users.some(
+        userInfo => userInfo.email === registerUser.email,
+      );
+
+      if(!userExists) {
+        return this.userService.addUser(registerUser);
+      }
+
+      return throwError('E-mail já cadastrado')
+    })).subscribe(user => {
+      this.loginAuth(user);
+    }, error => {
+      alert(error);
+    })
   }
 
   public loginAuth(currentUser: CurrentUser): void {

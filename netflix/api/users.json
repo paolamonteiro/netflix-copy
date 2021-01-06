@@ -1,31 +1,4 @@
 {
   "users": [
-    {
-      "id": "1",
-      "fullName": "Ozob da Silva",
-      "email": "ozob@gmail.com",
-      "password": "1234",
-      "profiles": [
-        {
-          "name": "Ozob",
-          "avatar": "./assets/avatar1.png",
-          "favoriteMovies": []
-        }
-      ]
-    },
-    {
-      "email": "teste@teste.com",
-      "password": "abc123",
-      "fullName": "Teste Testando",
-      "profiles": [],
-      "id": "85iwtnR"
-    },
-    {
-      "email": "teste@teste.com",
-      "password": "abc123",
-      "fullName": "Teste Testando",
-      "profiles": [],
-      "id": "QTu2fEr"
-    }
   ]
 }
