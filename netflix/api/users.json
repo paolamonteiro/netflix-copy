@@ -12,6 +12,20 @@
           "favoriteMovies": []
         }
       ]
+    },
+    {
+      "email": "teste@teste.com",
+      "password": "abc123",
+      "fullName": "Teste Testando",
+      "profiles": [],
+      "id": "85iwtnR"
+    },
+    {
+      "email": "teste@teste.com",
+      "password": "abc123",
+      "fullName": "Teste Testando",
+      "profiles": [],
+      "id": "QTu2fEr"
     }
   ]
 }

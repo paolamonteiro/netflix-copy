@@ -1,37 +1,39 @@
-<main class="login-container">
+<main class="login-container" >
   <div class="gradient-filter"></div>
   <header>
     <img class="logo" src="../../../../assets/netflix-logo.svg" alt="Netflix Logo" />
   </header>
 
-  <section class="container login-container-card">
+  <pre>{{ signUpForm.value | json }}</pre>
+
+  <section class="container login-container-card" >
     <div class="card">
       <div class="card-content">
         <h1 class="card-title">Registrar</h1>
-        <form>
+        <form [formGroup]="signUpForm">
           <div class="input-field active">
-            <input id="name" type="text" />
+            <input id="name" type="text" formControlName="fullName" />
             <label for="name">Nome</label>
             <span class="helper-text" data-error="wrong" data-success="right"></span>
           </div>
           <div class="input-field active">
-            <input id="email" type="email" />
-            <label for="email">Email ou número de telefone</label>
+            <input id="email" type="email" formControlName="email"/>
+            <label for="email">Email</label>
             <span class="helper-text" data-error="wrong" data-success="right"></span>
           </div>
 
           <div class="input-field">
-            <input id="password" type="password" />
+            <input id="password" type="password" formControlName="password" />
             <label for="password">Senha</label>
             <span class="helper-text" data-error="wrong" data-success="right">Invalid password</span>
           </div>
 
           <div class="input-field">
-            <input id="password-confimation" type="password" />
+            <input id="password-confimation" type="password" formControlName="passwordConfirmation" />
             <label for="password-confimation">Confirme sua senha</label>
             <span class="helper-text" data-error="wrong" data-success="right">Invalid password</span>
           </div>
-          <button type="button" class="waves-effect waves-light btn">Registrar-se</button>
+          <button type="button" class="waves-effect waves-light btn" (click)="register()">Registrar-se</button>
           <div class="info">
             <label>
               <input class="info__remember" type="checkbox" id="remember" />
