@@ -76,4 +76,8 @@ export class AuthService {
   public getUserId(): string {
     return localStorage.getItem('netflix-user-id');
   }
+
+  public isAuthenticated(): boolean {
+    return !!this.getUserId();
+  }
 }
