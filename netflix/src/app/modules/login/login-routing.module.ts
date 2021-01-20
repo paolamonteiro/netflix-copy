@@ -1,16 +1,14 @@
+import { LoginPageGuard } from './../../shared/guard/login-page.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from 'src/app/shared/guard/auth.guard';
 
 import { LoginComponent } from './login/login.component';
-import { ProfilesComponent } from './profiles/profiles.component';
 
-const routes: Routes = [
-  { path: '', pathMatch: 'full', component: LoginComponent },
-  { path: 'profiles', component: ProfilesComponent },
-];
+const routes: Routes = [{ path: '', pathMatch: 'full', component: LoginComponent, canActivate: [AuthGuard] }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class LoginRoutingModule { }
+export class LoginRoutingModule {}
