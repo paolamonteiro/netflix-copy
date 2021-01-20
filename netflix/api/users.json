@@ -1,4 +1,11 @@
 {
   "users": [
+    {
+      "email": "admin@admin.com",
+      "password": "admin123456",
+      "fullName": "admin",
+      "profiles": [],
+      "id": 1
+    }
   ]
 }
