@@ -1,11 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { configureTestSuite } from 'ng-bullet';
 
 import { AuthGuard } from './auth.guard';
 
 describe('AuthGuard', () => {
   let guard: AuthGuard;
 
-  beforeEach(() => {
+  configureTestSuite(() => {
     TestBed.configureTestingModule({});
     guard = TestBed.inject(AuthGuard);
   });

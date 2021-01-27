@@ -2,9 +2,11 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "esModuleInterop": true,
     "outDir": "./out-tsc/spec",
-    "types": ["jasmine"]
+    "types": ["jest", "node"],
+    "emitDecoratorMetadata": true,
   },
   "files": ["src/test.ts", "src/polyfills.ts"],
-  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"],
 }

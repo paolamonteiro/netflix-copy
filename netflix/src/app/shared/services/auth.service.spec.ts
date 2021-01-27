@@ -1,11 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { configureTestSuite } from 'ng-bullet';
 
 import { AuthService } from './auth.service';
 
 describe('AuthService', () => {
   let service: AuthService;
 
-  beforeEach(() => {
+  configureTestSuite(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(AuthService);
   });

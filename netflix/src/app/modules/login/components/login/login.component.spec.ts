@@ -1,25 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { render, screen } from '@testing-library/angular';
+import { provideMock } from '@testing-library/angular/jest-utils';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import { AuthService } from '../../../../shared/services/auth.service';
 import { LoginComponent } from './login.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('Login Testing library', () => {
+  test('should create', async () => {
+    await render(LoginComponent, {
+      imports: [FormsModule, ReactiveFormsModule],
+      componentProviders: [provideMock(AuthService)],
+    });
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(screen.getByText('Assine agora.'));
   });
 });
