@@ -11,7 +11,6 @@ import { AuthService } from '../../../../shared/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
-  public subscriptions = new Subscription();
 
   constructor(private fb: FormBuilder, private authService: AuthService) {}
 
@@ -24,9 +23,5 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.authService.loginAuth(this.loginForm.value);
-  }
-
-  ngOnDestroy() {
-    this.subscriptions.unsubscribe();
   }
 }

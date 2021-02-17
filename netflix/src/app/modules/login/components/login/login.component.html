@@ -10,13 +10,13 @@
         <h1 class="card-title">Entrar</h1>
         <form [formGroup]="loginForm">
           <div class="input-field active">
-            <input id="email" type="email" formControlName="email" />
+            <input id="email" type="email" formControlName="email" name="email" />
             <label for="email">Email ou número de telefone</label>
             <span class="helper-text" data-error="wrong" data-success="right">Email inválido</span>
           </div>
 
           <div class="input-field">
-            <input id="password" type="password" formControlName="password" />
+            <input id="password" type="password" formControlName="password" name="password" />
             <label for="password">Senha</label>
             <span class="helper-text" data-error="wrong" data-success="right">Senha inválida</span>
           </div>

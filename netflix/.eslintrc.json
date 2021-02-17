@@ -15,12 +15,8 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "import-helpers",
-    "unused-imports"
-  ],
+  "plugins": ["@typescript-eslint", "prettier", "import-helpers", "unused-imports"],
+  "eslint.workingDirectories": [{ "directory": "src", "changeProcessCWD": true }],
   "rules": {
     "no-console": "warn",
     "no-case-declarations": "off",
@@ -44,11 +40,7 @@
     "no-extra-boolean-cast": "off",
     "no-else-return": "off",
     "default-case": "off",
-    "lines-between-class-members": [
-      "warn",
-      "always",
-      { "exceptAfterSingleLine": true }
-    ],
+    "lines-between-class-members": ["warn", "always", { "exceptAfterSingleLine": true }],
     "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
     "import-helpers/order-imports": [
       "warn",

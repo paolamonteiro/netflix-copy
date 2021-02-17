@@ -36,6 +36,7 @@
     "angular2-materialize-v1": "^1.0.6",
     "express": "^4.15.2",
     "materialize-css": "^1.0.0-rc.2",
+    "msw": "^0.26.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -46,6 +47,7 @@
     "@angular/compiler-cli": "~10.2.0",
     "@nguniversal/builders": "^10.1.0",
     "@testing-library/angular": "^10.3.1",
+    "@testing-library/user-event": "^12.7.1",
     "@types/express": "^4.17.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^12.11.1",
@@ -64,6 +66,7 @@
     "jest-cli": "^26.6.3",
     "jest-preset-angular": "^8.3.2",
     "json-server": "^0.16.3",
+    "ng-bullet": "^1.0.3",
     "prettier": "^2.1.2",
     "prettier-eslint": "^11.0.0",
     "ts-node": "~8.3.0",
